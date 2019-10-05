@@ -1,0 +1,23 @@
+## YAML Template.
+---
+name: Classics
+type: theme
+description: 'A theme customized for UCB Classics dept.'
+core: 8.x
+
+regions:
+  header: 'Header'
+  main_menu: 'Main menu'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  footer: 'Footer'
+  frontpage_carousel: 'Front Page Carousel'
+  frontpage_announcement: 'Front Page Announcement'
+  frontpage_one: 'Front Page One'
+  frontpage_two: 'Front Page Two'
+  frontpage_three: 'Front Page Three'
+  
+# Information added by Drupal.org packaging script on 2017-12-18
+version: '8.x-1.1'
+project: 'clssics'
+datestamp: 1513574901  

@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{#
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}
+#}
+<ol class="carousel-indicators">
+    {% for row in rows %}
+    <li data-target="#myCarousel" data-slide-to="{{loop.index0}}" class="{{ (loop.first) ? 'active' : '' }}"></li>
+{#    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="4" class=""></li>#}
+    {% endfor %}
+</ol>
+<div class="carousel-inner">
+{% for row in rows %}
+    <div class="carousel-item {{ (loop.first) ? 'active' : '' }}">
+    {{- row.content -}}
+    {#<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+    <div class="container">
+        <div class="carousel-caption text-left">
+            <h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+        </div>
+    </div>#}
+    </div>
+{% endfor %}
+</div>

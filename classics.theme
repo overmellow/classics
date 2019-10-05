@@ -1,0 +1,5 @@
+<?php
+
+function classics_preprocess_main__menu(&$variables) {
+  $variables['attributes']['class'][] = 'clearfix';
+}

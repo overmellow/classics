@@ -1,0 +1,69 @@
+{# empty Twig template #}
+
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+{#<img src="{{ url('<front>')| render ~ file_url('public://logo.png') }}" width="100" />#}
+<a class="navbar-brand" href="#">C</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+    {% import _self as menus %}
+    {{ menus.menu_links(items, attributes, 0, menu_name) }}
+
+    {% macro menu_links(items, attributes, menu_level, menu_name) %}    
+    
+  {% import _self as menus %}
+  {%
+    set menu_classes = [
+      'navbar-nav' | clean_class,
+      'mr-auto'
+    ]
+  %}  
+  {% if items %}
+    {% if menu_level == 0 %}
+    <ul{{ attributes.addClass(menu_classes) }}>
+    {% elseif menu_level == 1 %}
+    <ul>
+    {% endif %}
+    {%
+      set item_classes = [
+        'nav-item',
+      ]
+    %}
+    {% for item in items %}
+        {% if item.below %}
+        {%           
+            set item_classes = item_classes | merge(['dropdown'])
+        %}
+        {% endif %}        
+        <li{{ item.attributes.addClass(item_classes) }}>
+            {% set link_classes = ['nav-link',] %}
+            {% if item.below %}
+                {% set link_classes = link_classes | merge(['dropdown-toggle']) %}
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+            {% else %}
+                {{ link(item.title, item.url, item.attributes.removeClass(item_classes).addClass(link_classes)) }}        
+            {% endif %}
+            
+            
+            
+            {% if item.below %}
+              <div class="dropdown-menu">
+
+{#              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}#}
+              {% for iteme in item.below %}
+                  <a class="dropdown-item" href="{{ iteme.url }}">{{ iteme.title }}</a>
+              {% endfor %}
+              </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  {% endmacro %}
+</div>  
