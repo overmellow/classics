@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-3">
+        {{ content.user_picture }}    
+    </div>
+    <div class="col-3 py-1 pl-4">
+        <h4><strong>{{ content.field_first_name }} {{ content.field_last_name | render}}</strong></h4>
+        <h5>{{ content.field_title }}</h5>
+        <p>{{ content.field_email }}</p>
+    </div>
+</div>
+<hr>    
+<div class="row">
+    <div class="col-12">
+        <h4>Research Areas</h4>
+        {{ content.field_research_areas }}
+    </div>
+</div>    
+<hr>
+<div class="row">    
+    <div class="col-12">
+        <h4>Biography</h4>
+        {{ content.field_biography }}
+    </div>    
+</div>
+<hr>
+<div class="row">    
+    <div class="col-12">
+        <h4>Publications</h4>
+        {{ content.field_publications }}
+    </div>    
+</div>
+<hr>    
+<div class="row mb-5">    
+    <div class="col-12">
+        <h4>Books</h4>
+        <div class="card-deck">
+            <div class="card col-2 h-25 rounded-0">
+                <img src="..." class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="card col-2 h-25 rounded-0">
+                <img src="..." class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="card col-2 h-25 rounded-0">
+                <img src="..." class="card-img-top rounded-0" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+      </div>
+{#        {{ content.field_publications }}#}
+    </div>    
+</div>    
+    

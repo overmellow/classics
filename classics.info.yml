@@ -5,12 +5,18 @@ type: theme
 description: 'A theme customized for UCB Classics dept.'
 core: 8.x
 
+libraries:
+  - classics/global-styling-and-scripts
+
 regions:
   header: 'Header'
   main_menu: 'Main menu'
   content: 'Content'
   sidebar_first: 'Sidebar first'
-  footer: 'Footer'
+  footer_one: 'Footer One'
+  footer_two: 'Footer Two'
+  footer_three: 'Footer Three'
+  footer_four: 'Footer Four'
   frontpage_carousel: 'Front Page Carousel'
   frontpage_announcement: 'Front Page Announcement'
   frontpage_one: 'Front Page One'
