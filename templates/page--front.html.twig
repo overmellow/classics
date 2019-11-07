@@ -63,31 +63,31 @@
     {{ page.frontpage_carousel }}
     </div>    
     
-    <div class="">
+    <div class="bg-light">
     {{ page.frontpage_announcement }}
     </div>
     
-    <div class="py-5 bg-info">
-        <div class="container">
+    <div class="py-5 bg-light">
+        <div class="container py-5">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="px-2 py-5 bg-dark">
-                        <h3>Featured courses</h3>
-                        <hr>
+                    <div class="px-2 py-5 bg-white">
+                        <h3 class="px-3 pb-3">Featured courses</h3>
+                        <hr width="92%">
                         {{ page.frontpage_one }}
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="px-2 py-5 bg-light">
-                        <h3>News</h3>
-                        <hr>
+                    <div class="px-2 py-5 bg-white">
+                        <h3 class="px-3 pb-3">News</h3>
+                        <hr width="92%"> 
                         {{ page.frontpage_two }}
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="px-2 py-5 bg-success">
-                    <h3>Events</h3>
-                    <hr>
+                    <div class="px-2 py-5 bg-white">
+                    <h3 class="px-3 pb-3">Events</h3>
+                    <hr width="92%">
                     {{ page.frontpage_three }}
                     </div>
                 </div>
@@ -97,81 +97,115 @@
     
     <!-- START THE FEATURETTES -->
 
-    
-    <div class="container py-5">
-{#        <hr class="featurette-divider">#}
-        <div class="row featurette">
-          <div class="col-md-8">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-4">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-          </div>
+    <div class="py-5">
+        <div class="container py-5">
+    {#        <hr class="featurette-divider">#}
+            <div class="row featurette">
+              <div class="col-md-8">
+                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              </div>
+              <div class="col-md-4">
+    {#            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
+                <div class="card bg-dark text-white shadow rounded-0 border-0">
+                    <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
+                </div>               
+              </div>
+            </div>
         </div>
     </div>
 
     <!-- START of fifth banner -->
     
     <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-md-4">
-                <div class="card bg-dark text-white shadow rounded-0 border-0">
-                    <img src="http://128.32.202.134/classics/sites/default/files/2019-10/Eiffel_Tower_Vertical.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-{#              <div class="card mb-4 shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                  
-                </div>
-              </div>#}
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-dark text-white shadow rounded-0 border-0">
-                    <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>                              
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm rounded-0">
-                <svg class="bd-placeholder-img card-img-top rounded-0" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                  
-                </div>
+        <div class="container py-5">
+            
+            <div class="row justify-content-md-center">
+                <div class="col-md-4">
+                  <div class="card bg-dark text-white shadow rounded-0 border-0">
+                      <img src="http://128.32.202.134/classics/sites/default/files/2019-10/Eiffel_Tower_Vertical.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
+                      <div class="card-img-overlay">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text">Last updated 3 mins ago</p>
+                      </div>
+                  </div>
+  {#              <div class="card mb-4 shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                  
+                  </div>
+                </div>#}
+              </div>
+              <div class="col-md-4">
+                  <div class="card bg-dark text-white shadow rounded-0 border-0">
+                      <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
+                      <div class="card-img-overlay">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text">Last updated 3 mins ago</p>
+                      </div>
+                  </div>                              
+              </div>
+              <div class="col-md-4">
+                  <div class="card bg-dark text-white shadow rounded-0 border-0">
+                      <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
+                      <div class="card-img-overlay">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text">Last updated 3 mins ago</p>
+                      </div>
+                  </div>                              
               </div>
             </div>
-          </div>
         </div>
       </div>
     
     <!-- end of fifth banner -->
     <footer class="">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-sm-4">
-                    {{ page.footer_one }}
+        <div  style="padding: 5rem 0;">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ page.footer_one }}
+                    </div>
+                    <div class="col-sm-5">
+                        {{ page.footer_two }}
+                    </div>
+                    <div class="col-sm-3">
+                        
+                    </div>              
                 </div>
-                <div class="col-sm-5">
-                    {{ page.footer_two }}
-                </div>
-                <div class="col-sm-3">
-                    <div id="berkeley-text-logo">
-                        <img src="https://as.ugis.berkeley.edu/wp-content/uploads/2018/09/UCBerkeley_wordmark_white.png" alt="berkeley logo" width="200">
-                    </div>                    
-                </div>              
             </div>
-        </div>                
+        </div>
+        <div class="" style="background-color: #003262; padding: 5rem 0;">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p>
+                            <a href="#" class="text-decoration-none text-white">Undergraduate Interdisciplinary Studies</a><br>
+                            <a href="#" class="text-decoration-none text-white">College of Letters & Science</a><br>
+                            <a href="#" class="text-decoration-none text-white">Undergraduate Research and Scholarships</a><br>
+                            <a href="#" class="text-decoration-none text-white">UGIS Graduation</a><br>
+                            <a href="#" class="text-decoration-none text-white">Berkeley Home</a>
+                        </p>
+                        <hr style="border: 0.6px solid white;">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fas fa-sign-in-alt"></i>
+                    </div>
+                    <div class="col-sm-3 align-self-end">
+                        <div id="berkeley-text-logo">
+                            <img src="https://as.ugis.berkeley.edu/wp-content/uploads/2018/09/UCBerkeley_wordmark_white.png" alt="berkeley logo" width="300">
+                            <p class="pt-2 text-muted">&nbsp2019 Regents of the University of California<br>
+                                &nbspPowered by Drupal<br>
+                                &nbspSite by mfaraji@berkeley.edu<br>
+                            </p>                            
+                        </div>                    
+                    </div>              
+                </div>
+            </div>
+        </div>                    
         <div class="col-sm-12 py-3 bg-light">
             <div class="container">
                 <p class="float-right"><a href="#">Back to top</a></p>

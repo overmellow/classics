@@ -22,15 +22,13 @@
 {% endif %}
 {% for row in rows %}
     
-    <div class="pt-1 pb-2 px-3">
-{#        <span class="font-weight-light">#}
+    <div class="">
+{#    <div class="pt-1 pb-2 px-3">        #}
             {{- row.content -}}
-{#        </span>#}
     </div>
   
     {% if loop.last  == false %}           
     <hr width="50%">  
-    {% endif %}         
-  
+    {% endif %}           
 {% endfor %}
 

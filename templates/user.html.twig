@@ -3,7 +3,7 @@
         {{ content.user_picture }}    
     </div>
     <div class="col-3 py-1 pl-4">
-        <h4><strong>{{ content.field_first_name }} {{ content.field_last_name | render}}</strong></h4>
+        <h4><strong>{{ content.field_full_name| render }}</strong></h4>
         <h5>{{ content.field_title }}</h5>
         <p>{{ content.field_email }}</p>
     </div>
