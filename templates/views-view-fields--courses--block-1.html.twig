@@ -98,29 +98,35 @@
             </div>
         </div>
     </div>#}
-    <div class="pt-1 pb-2 px-3">
-        <div class="col-12">
-            <span class="font-weight-bold text-decoration-none">
-            {{ fields.title.content }}
-            </span>
-        </div>
-        <div class="col-12">
-            <span class="font-weight-light">
-            {{ fields.body.content }}
-            </span>
-        </div>
-        <div class="col-12">
-            <span class="font-weight-light">
-            {{ fields.field_course_number.label }}: {{ fields.field_course_number.content }}
-            </span>
-        </div>        
-        <div class="col-12">
-            {{ fields.field_semester.label }}: {{ fields.field_semester.content }}
-        </div>
-        {% if fields.field_image %}
-        <div class="col-12 py-1">
-            {{ fields.field_image.content }}        
-        </div>            
-        {% endif %}
+    <div class="col">
+        <div class="row pb-2 px-3">
+            {% if fields.field_image %}
+            <div class="col-12 py-1">
+                {{ fields.field_image.content }}        
+            </div>            
+            {% endif %}            
+            <div class="col-12">
+                <span class="font-weight-bold text-decoration-none">
+                {{ fields.title.content }}
+                </span>
+            </div>
+            <div class="col-12">
+                <span class="font-weight-normal">
+                {{ fields.body.content }}
+                </span>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="font-weight-normal">{{ fields.field_course_number.label }}:</span> 
+                        <span class="font-weight-bold text-muted">{{ fields.field_course_number.content }}</span>
+                    </div>        
+                    <div class="col-3">
+                    {#{{ fields.field_semester.label }}: #}
+                    <span class="font-weight-bold text-muted">{{ fields.field_semester.content }}</span>
+                    </div>
+                </div>                
+            </div>                  
+        </div>    
     </div>            
 </div>

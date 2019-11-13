@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
     var navbar = document.getElementById("main-menu");
 //    var sticky = navbar.offsetTop;
     function myFunction() {
-        console.log(window.pageYOffset)
+//        console.log(window.pageYOffset)
         if (window.pageYOffset >= 100) {
             navbar.classList.remove("transparent"); 
         } else {
@@ -27,6 +27,10 @@ jQuery(document).ready(function(){
     }    
     
     myFunction();       
+    
+    function boxFunction() {
+        
+    }
 });
 
 

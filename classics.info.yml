@@ -7,6 +7,7 @@ core: 8.x
 
 libraries:
   - classics/global-styling-and-scripts
+  - core/jquery
 
 regions:
   header: 'Header'
@@ -22,6 +23,7 @@ regions:
   frontpage_one: 'Front Page One'
   frontpage_two: 'Front Page Two'
   frontpage_three: 'Front Page Three'
+  profile_books: 'Profile Books'
   
 # Information added by Drupal.org packaging script on 2017-12-18
 version: '8.x-1.1'

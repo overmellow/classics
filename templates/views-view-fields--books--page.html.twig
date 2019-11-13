@@ -53,23 +53,20 @@
   {%- endif %}
 {%- endfor %}#}
 
-<div class="col-sm-3 py-1">
-{{ fields.user_picture.content }}
+<div class="col-sm-2 py-1">
+{{ fields.field_image.content }}
 </div>
-<div class="col-sm-9 py-1 pl-4">
+<div class="col-sm-10 py-1 pl-4">
     <div class="row">
         <div class="col-12">
-            <h4><strong>{{ fields.field_first_name.content }} {{ fields.field_last_name.content }}</strong></h4>
-            <h5 class="text-muted">{{ fields.field_title.content }}</h5>
+{#            <h4><strong>{{ fields.content }} {{ fields.field_last_name.content }}</strong></h4>#}
+            <h5>{{ fields.field_title.content }}</h5>
+            <h4>{{contents.field_title}}</h4>
         </div>            
         <div class="col-12">
-            Email: {{ fields.field_email.content }}
+            Author(s): {{ fields.field_author.content }}
         </div>
-        {% if fields.field_office %}
-        <div class="col-12">
-            Office: {{ fields.field_office.content }}
-        </div>        
-        {% endif %}
+
         {% if fields.field_research_areas.content %}
         <div class="col-12">
             Research Areas: {{ fields.field_research_areas.content }}

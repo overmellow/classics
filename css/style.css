@@ -18,3 +18,47 @@
     padding-bottom: 15px;
     transition: all 0.5s ease-out;
 }
+
+.carousel-item,
+.carousel-item > img {
+    height: 680px !important
+}
+
+.box {
+    background: url("http://localhost/classics/sites/default/files/2019-11/white-paint.png") no-repeat;
+    height: 400px;
+    padding: 110px 50px;
+    text-align: center;
+}
+
+.box:hover {
+    background: url("http://localhost/classics/sites/default/files/2019-11/tower.jpg") no-repeat;
+    color: white;
+}
+
+/* DRY */
+.transition{
+    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+}
+
+.box .icon {
+    border: 0;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+#footer-icons > .fab, #footer-icons > .fas {
+    color: white;
+    margin: 0 3px;
+}
+
+.fas, .fab {
+    margin: 0 3px;
+}
+
+#arrow-to-top > .fas {
+    color: #003262;
+}
