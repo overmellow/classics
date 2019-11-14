@@ -27,10 +27,6 @@ jQuery(document).ready(function(){
     }    
     
     myFunction();       
-    
-    function boxFunction() {
-        
-    }
 });
 
 

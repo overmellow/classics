@@ -62,3 +62,51 @@
 #arrow-to-top > .fas {
     color: #003262;
 }
+
+/*
+main-menu
+*/
+
+div.dropdown-menu {
+    border-radius: 0;
+    border: 0;
+    transition: all 0.5s ease-out;
+    padding: 0 !important;
+}
+
+nav.transparent div.dropdown-menu {
+    margin-top: 20px !important;    
+    background-color: rgba(28, 28, 28, 0.7) !important;
+}
+
+nav div.dropdown-menu {
+    margin-top: 15px !important;
+    background-color: rgba(28, 28, 28, 1) !important;
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, .5) !important;
+    padding: .75rem 2rem .75rem 1.5rem !important;
+}
+
+.dropdown-item:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgba(255, 255, 255, .5) !important;
+}
+
+.dropdown-toggle:after {
+    /*display: none !important;*/
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+    /*display: block !important;*/
+}
+
+.side-menu .dropdown:hover .dropdown-menu {
+    /*display: block !important;*/
+}
+
+li:has(is-active) {
+    background-color: yellow !important;
+    display:block !important;
+}
