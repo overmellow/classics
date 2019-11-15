@@ -53,46 +53,78 @@
   {%- endif %}
 {%- endfor %}#}
 
-<div class="col-sm-3 py-1">
-{{ fields.user_picture.content }}
-</div>
+{#<div class="col-sm-3 py-1">#}
+{#{{ fields.user_picture.content }}#}
+{#</div>
 <div class="col-sm-9 py-1 pl-4">
     <div class="row">
-        <div class="col-12">
+        <div class="col-4 ">
+            {{ fields.field_date.content }}
+        </div>
+        <div class="col-8 border-left">
+            {{ fields.title.content }}
+        </div>#}
+{#        <div class="col-12">
             <h4><strong>{{ fields.field_first_name.content }} {{ fields.field_last_name.content }}</strong></h4>
-            <h5 class="text-muted">{{ fields.field_title.content }}</h5>
+            <h5>{{ fields.field_title.content }}</h5>
         </div>            
         <div class="col-12">
             Email: {{ fields.field_email.content }}
         </div>
-        {% if fields.field_office.content %}
+        {% if fields.field_office %}
         <div class="col-12">
-            <div class="row">
-                {% if fields.field_office.content %}
-                <div class="col-6">
-                Office: {{ fields.field_office.content }}
-                </div>
-                {% endif %}
-                {% if fields.field_office_hours.content %}
-                <div class="col-6">
-                Office Hours: {{ fields.field_office_hours.content}}
-                </div>
-                {% endif %}
-            </div>
+            Office: {{ fields.field_office.content }}
         </div>        
         {% endif %}
         {% if fields.field_research_areas.content %}
         <div class="col-12">
             Research Areas: {{ fields.field_research_areas.content }}
         </div>        
-        {% endif %}
-        {% if fields.field_research_areas.content| length %}
+        {% endif %}#}
+{#    </div>
+</div>
+#}    
+<div class="row my-3">
+    <div class="col-2 text-center border-right my-auto">
+        <div>
+            <div class="col-12">
+                <h6>{{ fields.field_date.content }}</h5>
+            </div>
+            <div class="col-12">
+                <h5>{{ fields.field_date_1.content }}</h6>
+            </div>
+            <div class="col-12 text-muted">
+                <h6>{{ fields.field_date_2.content }}</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-10">
         <div class="col-12">
-            Research Interests: {{ fields.field_research_areas.content |length }}
-            {% set roles = user.getroles(TRUE) %}
-            {{ dump(fields.field_roles.content) }}
-{#             {{ fields.field_roles.content |length }}#}
-        </div>        
-        {% endif %}
+            <span class="font-weight-bold text-decoration-none">
+            {{ fields.title.content }}
+            </span>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3">
+                    {{ fields.field_time_from.content }} - {{ fields.field_time_to.content }} 
+                </div>
+                <div class="col-4">
+                    Location: <span class="font-weight-bold text-muted">{{ fields.field_location.content }}</span>
+                </div>                
+                <div class="col-6">
+{#                    Speaker(s): {{ fields.field_speaker.content }}#}
+                </div>
+            </div>
+        </div>            
+        <div class="col-12">
+            Speaker(s): <span class="font-weight-bold text-muted">{{ fields.field_speaker.content }}</span>
+        </div>            
+                
+        <div class="col-12">
+            <span class="font-weight-light">
+            {{ fields.body.content }}
+            </span>
+        </div>            
     </div>
 </div>

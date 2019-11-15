@@ -5,8 +5,17 @@
         </div>
         <div class="col-9 py-1 pl-4">
             <h4><strong>{{ content.field_full_name| render }}</strong></h4>
-            <h5 class="text-muted">{{ content.field_title }}</h5>
-            <p>{{ content.field_email }}</p>
+            <h5 class="text-muted">{{ content.field_title }}</h5>           
+            <div>{{ content.field_email }}</div>
+            <div class="row">
+                <div class="col-6">
+                    {{ content.field_office }}
+                    {{ content.user_roles }}
+                </div>
+                <div class="col-6">
+                    {{ content.field_office_hours }}
+                </div>
+            </div>    
         </div>
     </div>
     <hr>    
@@ -33,30 +42,6 @@
     {% if content.field_books |length > 2 %}        
     <hr>    
     <div class="row mb-5">    
-        {#<div class="col-12">
-            <h4>Books</h4>
-            <div class="card-deck">
-                <div class="card col-2 h-25 rounded-0">
-                    <img src="..." class="card-img-top rounded-0" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                    </div>
-                </div>
-                <div class="card col-2 h-25 rounded-0">
-                    <img src="..." class="card-img-top rounded-0" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                    </div>
-                </div>
-                <div class="card col-2 h-25 rounded-0">
-                    <img src="..." class="card-img-top rounded-0" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                    </div>
-                </div>
-            </div>
-        </div>#}
-
         <div class="col-12" id="author">
             <h4>Books</h4>
             {{content.field_books }}

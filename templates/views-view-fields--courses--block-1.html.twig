@@ -112,13 +112,13 @@
             </div>
             <div class="col-12">
                 <span class="font-weight-normal">
-                {{ fields.body.content }}
+{#                {{ fields.body.content }}#}
+                {{ fields.field_course_summary.content }}
                 </span>
             </div>
             <div class="col-12">
                 <div class="row">
                     <div class="col-6">
-                        <span class="font-weight-normal">{{ fields.field_course_number.label }}:</span> 
                         <span class="font-weight-bold text-muted">{{ fields.field_course_number.content }}</span>
                     </div>        
                     <div class="col-3">
@@ -126,7 +126,14 @@
                     <span class="font-weight-bold text-muted">{{ fields.field_semester.content }}</span>
                     </div>
                 </div>                
-            </div>                  
+            </div>
+            <div class="col-12">
+                Instructor: 
+                <span class="font-weight-normal">
+{#                        {{ fields.body.content }}#}
+                {{ fields.field_instructor.content }}
+                </span>
+            </div>                      
         </div>    
     </div>            
 </div>

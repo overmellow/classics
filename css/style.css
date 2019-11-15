@@ -19,20 +19,23 @@
     transition: all 0.5s ease-out;
 }
 
+/*
+* carousel
+*/
 .carousel-item,
 .carousel-item > img {
     height: 680px !important
 }
 
 .box {
-    background: url("http://localhost/classics/sites/default/files/2019-11/white-paint.png") no-repeat;
+    background: url("http://128.32.202.134/classics/sites/default/files/2019-11/white-paint.png") no-repeat;
     height: 400px;
     padding: 110px 50px;
     text-align: center;
 }
 
 .box:hover {
-    background: url("http://localhost/classics/sites/default/files/2019-11/tower.jpg") no-repeat;
+    background: url("http://128.32.202.134/classics/sites/default/files/2019-11/tower.jpg") no-repeat;
     color: white;
 }
 
@@ -106,7 +109,24 @@ nav div.dropdown-menu {
     /*display: block !important;*/
 }
 
-li:has(is-active) {
+/*a:active(is-active) {
     background-color: yellow !important;
     display:block !important;
+}*/
+
+/*a.is-active + ul.d-none {
+    display:block !important;
+}*/
+
+a:not(.is-active) + ul.dnone > a:not(.is-active){
+    display:none !important;
 }
+
+a.is-active + ul.dnone {
+    display:block !important;
+}
+
+a.is-active {
+    font-weight: bold;
+}
+
