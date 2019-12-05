@@ -72,30 +72,5 @@
  * @ingroup themeable
  */
 #}
-<div class="">
-    <div class="row">  
-        {% if content.field_image|render is not empty %}
-        <div class="col-12 my-3">
-            <div class="header-image-wrapper">
-                {{ content.field_image }}
-                <div class="overlay-shade">
-                      <div class="overlay-shade-text">{{ node.label }}</div>
-                </div>
-                {% if breadcrumb %}
-                    {% for item in breadcrumb %}
-                        {{item}}
-                    {% endfor %}
-                {% endif %}
-            </div>
-        </div>
-        {% else %}
-            <div class="col-12 my-3">
-                <h1>{{ node.label }}</h1>
-            </div>  
-        {% endif %}    
 
-        <div class="col-12">
-            {{ content.body }}
-        </div>  
-    </div>  
-</div>
+{{ content.field_image }}

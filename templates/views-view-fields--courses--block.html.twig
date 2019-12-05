@@ -99,17 +99,17 @@
         </div>
     </div>#}
     <div class="col">
-        <div class="row pb-2 px-3">
-            {% if fields.field_image %}
-            <div class="col-12 py-1">
-                {{ fields.field_image.content }}        
-            </div>            
-            {% endif %}            
+        <div class="row pb-2 px-3">           
             <div class="col-12">
                 <span class="font-weight-bold text-decoration-none">
                 {{ fields.title.content }}
                 </span>
             </div>
+            {% if fields.field_image.content|length > 245 %}
+            <div class="col-12 py-1">
+                {{ fields.field_image.content }}        
+            </div>            
+            {% endif %}                 
             <div class="col-12">
                 <span class="font-weight-normal">
 {#                {{ fields.body.content }}#}
@@ -128,7 +128,7 @@
                 </div>                
             </div>
             <div class="col-12">
-                Instructor: 
+                <i class="fas fa-chalkboard-teacher fa-lg" title="Instructor"></i> 
                 <span class="font-weight-normal">
 {#                        {{ fields.body.content }}#}
                 {{ fields.field_instructor.content }}

@@ -17,23 +17,116 @@
  * @ingroup themeable
  */
 #}
+
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
+<h1>{{ view.title }}</h1>
 <div class="py-3">
-{% for row in rows %}
-  {%
-    set row_classes = [
-      default_row_class ? 'views-row',
-      'row'
-    ]
-  %}
-    <div{{ row.attributes.addClass(row_classes) }}>
-      {{ row.content }}
-    </div>
-    {% if loop.last  == false %}           
-    <hr>  
+    <ul class="nav nav-tabs" id="myTab" role="tablist">        
+        <li class="nav-item">
+          <a class="nav-link active" href="#graduate" id="graduate-tab" data-toggle="tab" role="tab" aria-controls="graduate" aria-selected="true">Graduate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#greek" id="greek-tab" data-toggle="tab" role="tab" aria-controls="greek" aria-selected="true">Greek</a>
+        </li>     
+        <li class="nav-item">
+          <a class="nav-link" href="#latin" id="latin-tab" data-toggle="tab" role="tab" aria-controls="latin" aria-selected="true">Latin</a>
+        </li>        
+        <li class="nav-item">
+          <a class="nav-link" href="#undergraduate" id="undergraduate-tab" data-toggle="tab" role="tab" aria-controls="undergraduate" aria-selected="true">Undergraduate</a>
+        </li>        
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        {% set graduate = FALSE %}
+        {% set greek = FALSE %}        
+        {% set latin = FALSE %}        
+        {% set undergraduate = FALSE %}
+        
+        {% for row in rows %}            
+            
+            {% set previous_row_level = level %}            
+            {% set level = view.style_plugin.getField(loop.index0, 'field_course_type')|striptags %}            
+            
+            {% if loop.first == false and previous_row_level == level %}           
+            <hr>  
+            {% endif %}       
+         
+            {% if "Graduate" in level %}
+                {% if not graduate %}
+                {% set graduate = TRUE %}                
+                <div class="tab-pane fade px-2 show active" id="graduate" role="tabpanel" aria-labelledby="graduate-tab">
+                {% endif %}                
+                
+            {% elseif "Greek" in level %}
+                {% if not greek %}
+                    {% set greek = TRUE %}
+                    {% if graduate %}
+                    </div>                    
+                    {% endif %}
+                    <div class="tab-pane fade px-2" id="greek" role="tabpanel" aria-labelledby="greek-tab">
+                {% endif %}
+                
+            {% elseif "Latin" in level %}
+                {% if not latin %}
+                    {% set latin = TRUE %}
+                    {% if greek or graduate %}
+                    </div>                
+                    {% endif %}
+                    <div class="tab-pane fade px-2" id="latin" role="tabpanel" aria-labelledby="latin-tab">
+                {% endif %}
+                
+            {% elseif "Undergraduate" in level %}
+                {% if not undergraduate %}
+                    {% set undergraduate = TRUE %}                
+                    {% if latin or greek or graduate %}
+                    </div>                
+                    {% endif %}
+                    <div class="tab-pane fade px-2" id="undergraduate" role="tabpanel" aria-labelledby="undergraduate-tab">                    
+                {% endif %}
+                
+            {% endif %}          
+            
+        {%
+          set row_classes = [
+            default_row_class ? 'views-row',
+            'row'
+          ]
+        %}
+        
+        <div{{ row.attributes.addClass(row_classes) }}>
+        {{ row.content }}
+        </div>            
+        
+        {% if loop.last %}          
+        </div>
+        {% endif %}   
+    {% endfor %}
+       
+    {% if not graduate  %}
+        <div class="tab-pane fade px-2 show active" id="graduate" role="tabpanel" aria-labelledby="graduate-tab">
+            <div class="row my-3 py-2">
+                <div class="col"><h3 class="text-muted">No Graduate Courses</h3></div>
+            </div>
+        </div>
+    {% elseif not greek %} 
+        <div class="tab-pane fade px-2" id="greek" role="tabpanel" aria-labelledby="greek-tab">
+            <div class="row my-3 py-2">
+                <div class="col"><h3 class="text-muted">No Greek Courses</h3></div>
+            </div>
+        </div>        
+    {% elseif not latin %}        
+        <div class="tab-pane fade px-2" id="latin" role="tabpanel" aria-labelledby="latin-tab">
+            <div class="row my-3 py-2">
+                <div class="col"><h3 class="text-muted">No Latin Courses</h3></div>
+            </div>
+        </div>        
+    {% elseif not undergraduate %}        
+        <div class="tab-pane fade px-2" id="undergraduate" role="tabpanel" aria-labelledby="undergraduate-tab">
+            <div class="row my-3 py-2">
+                <div class="col"><h3 class="text-muted">No Undergraduate Courses</h3></div>
+            </div>
+        </div>
     {% endif %}    
-{% endfor %}
+    </div>
 </div>
-

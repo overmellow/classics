@@ -52,7 +52,7 @@
     </{{ field.wrapper_element }}>
   {%- endif %}
 {%- endfor %}#}
-
+{#    {{ dump(fields|keys) }}#}
 <div class="col-sm-3 py-1">
 {{ fields.user_picture.content }}
 </div>
@@ -61,38 +61,46 @@
         <div class="col-12">
             <h4><strong>{{ fields.field_first_name.content }} {{ fields.field_last_name.content }}</strong></h4>
             <h5 class="text-muted">{{ fields.field_title.content }}</h5>
+            {% if 'Department Chair' in fields.roles_target_id.content|render %}
+            <h5>Department Chair</h5>
+            {% endif %}
         </div>            
         <div class="col-12">
-            Email: {{ fields.field_email.content }}
+            <i class="fas fa-envelope fa-lg" title="Email"></i> {{ fields.field_email.content }}
         </div>
         {% if fields.field_office.content %}
         <div class="col-12">
             <div class="row">
                 {% if fields.field_office.content %}
                 <div class="col-6">
-                Office: {{ fields.field_office.content }}
+                <i class="fas fa-building fa-lg" title="Office"></i> {{ fields.field_office.content }}
                 </div>
                 {% endif %}
                 {% if fields.field_office_hours.content %}
                 <div class="col-6">
-                Office Hours: {{ fields.field_office_hours.content}}
+                <i class="fas fa-clock fa-lg" title="Office Hours"></i> {{ fields.field_office_hours.content}}
                 </div>
                 {% endif %}
             </div>
         </div>        
         {% endif %}
-        {% if fields.field_research_areas.content %}
+        {% if fields.field_research_areas.content|render|length > 245 %}
         <div class="col-12">
-            Research Areas: {{ fields.field_research_areas.content }}
+            {% if 'Faculty' in fields.roles_target_id.content|render or 'Emeriti' in fields.roles_target_id.content|render  %}
+            Research Areas:
+            {% else %}
+            Research Interests:
+            {% endif %}
+
+            <strong>{{ fields.field_research_areas.content }}</strong>
         </div>        
         {% endif %}
-        {% if fields.field_research_areas.content| length %}
-        <div class="col-12">
-            Research Interests: {{ fields.field_research_areas.content |length }}
-            {% set roles = user.getroles(TRUE) %}
-            {{ dump(fields.field_roles.content) }}
-{#             {{ fields.field_roles.content |length }}#}
-        </div>        
-        {% endif %}
+{#            {% set roles = user.getroles(TRUE) %}#}             
+{#        <div class="col-12">
+            Roles: {{ fields.roles_target_id.content }}
+             {% if 'Department Chair' in fields.roles_target_id.content|render %}                
+                <h1>Department Chair</h1>
+             {% endif %}
+        </div>#}
     </div>
 </div>
