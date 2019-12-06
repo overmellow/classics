@@ -109,19 +109,22 @@
                 <div class="col"><h3 class="text-muted">No Graduate Courses</h3></div>
             </div>
         </div>
-    {% elseif not greek %} 
+    {% endif %}
+    {% if not greek %} 
         <div class="tab-pane fade px-2" id="greek" role="tabpanel" aria-labelledby="greek-tab">
             <div class="row my-3 py-2">
                 <div class="col"><h3 class="text-muted">No Greek Courses</h3></div>
             </div>
         </div>        
-    {% elseif not latin %}        
+    {% endif %}          
+    {% if not latin %}        
         <div class="tab-pane fade px-2" id="latin" role="tabpanel" aria-labelledby="latin-tab">
             <div class="row my-3 py-2">
                 <div class="col"><h3 class="text-muted">No Latin Courses</h3></div>
             </div>
         </div>        
-    {% elseif not undergraduate %}        
+    {% endif %}          
+    {% if not undergraduate %}        
         <div class="tab-pane fade px-2" id="undergraduate" role="tabpanel" aria-labelledby="undergraduate-tab">
             <div class="row my-3 py-2">
                 <div class="col"><h3 class="text-muted">No Undergraduate Courses</h3></div>
