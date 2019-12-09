@@ -47,7 +47,10 @@
 #}
 <header>
     {% if page.main_menu %}
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark transparent" id="main-menu">
+    {% if logged_in %}
+        {% set logged_in_class = 'fixed-top-admintoolbar' %}
+    {% endif %}        
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark transparent {{logged_in_class}}" id="main-menu">
 {#      <div class="container-fluid">#}
           {{ page.main_menu }}
 {#      </div>#}
