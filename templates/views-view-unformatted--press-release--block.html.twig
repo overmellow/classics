@@ -18,18 +18,15 @@
  */
 #}
 {% if title %}
-  <h3>{{ title }}</h3>
-{% endif %}
-{% if view.title %}
-<h1>{{ view.title }}</h1>
+    <h3 class="px-3">{{ title }}</h3>
 {% endif %}
 {% for row in rows %}
-  {%
-    set row_classes = [
-      default_row_class ? 'views-row',
-    ]
-  %}
-  <div{{ row.attributes.addClass(row_classes) }}>
-    {{- row.content -}}
-  </div>
+    
+{#    <div class="pt-1 pb-2 px-3">#}
+{#        <span class="font-weight-light">#}
+            {{- row.content -}}
+{#        </span>#}
+{#    </div>#}
+    
 {% endfor %}
+

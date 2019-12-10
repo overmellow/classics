@@ -204,3 +204,30 @@ a.is-active {
     font-weight: 500;
     line-height: 1.2;
 }
+
+
+/* classics layout */
+
+@media only screen and (max-width: 768px) {
+    .press-release {
+        min-height: 580px;
+    }
+    .gsi-donate-books {
+        min-height: 680px;
+    }
+    .announcement {
+        min-height:340px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .press-release {
+        height: 580px;
+    }
+    .gsi-donate-books {
+       height: 680px;
+    }
+    .announcement {
+        height:340px;
+    }
+}

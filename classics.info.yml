@@ -20,6 +20,7 @@ regions:
   footer_four: 'Footer Four'
   frontpage_carousel: 'Front Page Carousel'
   frontpage_announcement: 'Front Page Announcement'
+  frontpage_press_release: 'Front Page Press Release'
   frontpage_one: 'Front Page One'
   frontpage_two: 'Front Page Two'
   frontpage_three: 'Front Page Three'

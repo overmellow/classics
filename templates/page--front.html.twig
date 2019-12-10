@@ -68,9 +68,11 @@
     
     <div class="bg-light">
 {#    {{ page.frontpage_announcement }}#}
-        <div class="announcement-wrapper py-5" style="height: 20rem;">
-            <div class="container py-5 bg-white px-5" style="height: 16rem;">
+        <div class="announcement-wrapper py-5 announcement">
+            <div class="container py-5 bg-white px-5">
+                <div class="row">
                 <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
             </div>
         </div>            
@@ -108,20 +110,19 @@
 
     <div class="py-5">
         <div class="container py-5">
-    {#        <hr class="featurette-divider">#}
-            <div class="row featurette">
-              <div class="col-md-8">
+            {{ page.frontpage_press_release }}
+{#            <div class="row featurette h-100">
+              <div class="col-md-8 my-auto">
                 <h2 class="featurette-heading">Our biggest news so far. <span class="text-muted">It is our first attempt.</span></h2>
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                 <p class="lead">Abbas importunus luptatum nulla nutus refoveo. Abbas camur dolus ex fere feugiat. Jus laoreet luctus sit. Blandit brevitas comis paratus tincidunt uxor vel. Meus quibus volutpat.</p>
                 <p class="lead">Neque nibh saepius torqueo vulpes. Ibidem interdico iriure nimis quia. Gravis jugis nunc. Aliquam humo nisl oppeto valetudo. Abdo defui importunus quidne sino vindico.</p>
               </div>
-              <div class="col-md-4">
-    {#            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
+              <div class="col-md-4 my-auto">
                 <div class="card bg-dark text-white shadow rounded-0 border-0">
                     <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
                 </div>               
-              </div>
+              </div>#}
             </div>
         </div>
     </div>
@@ -129,10 +130,9 @@
     <!-- START of fifth banner -->
     
     <div class="album py-5 bg-light">
-        <div class="container py-3">
-            
-            <div class="row justify-content-md-center">
-                <div class="col-lg-4 py-3 h-100">
+        <div class="container py-3 gsi-donate-books">            
+            <div class="row justify-content-md-center h-100">
+                <div class="col-lg-4 py-3 my-auto">
                     <div class="box bg-success transition" id="box-first">                        
                         <div class="icon">
                             <i class="fas fa-suitcase fa-3x"></i>
@@ -143,8 +143,8 @@
                         </div>
                     </div>    
                 </div>    
-                <div class="col-lg-4 py-3 h-100">
-                    <div class="box bg-info transition" id="box-second">                        
+                <div class="col-lg-4 py-3 my-auto">
+                    <div class="box bg-info transition my-auto" id="box-second">                        
                         <div class="icon">
                             <i class="fas fa-users fa-3x"></i>
                         </div>
@@ -154,7 +154,7 @@
                         </div>
                     </div>    
                 </div>   
-                <div class="col-lg-4 py-3 h-100">
+                <div class="col-lg-4 py-3 my-auto">
                     <div class="box bg-white transition" id="box-third">                        
                         <div class="icon">
                             <i class="fas fa-gift fa-3x"></i>
@@ -164,43 +164,7 @@
                             <p class="">Click here to see contact info and office hours for our contact Faculty, Staff and Directors.</p>
                         </div>
                     </div>    
-                </div>    
-                {#<div class="col-lg-4 py-3">
-                  <div class="card bg-dark text-white shadow rounded-0 border-0">
-                      <img src="http://128.32.202.134/classics/sites/default/files/2019-10/Eiffel_Tower_Vertical.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
-                      <div class="card-img-overlay">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text">Last updated 3 mins ago</p>
-                      </div>
-                  </div>#}
-  {#              <div class="card mb-4 shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                  
-                  </div>
-                </div>#}
-              {#</div>
-              <div class="col-lg-4 py-3">
-                  <div class="card bg-dark text-white shadow rounded-0 border-0">
-                      <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
-                      <div class="card-img-overlay">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text">Last updated 3 mins ago</p>
-                      </div>
-                  </div>                              
-              </div>
-              <div class="col-lg-4 py-3">
-                  <div class="card bg-dark text-white shadow rounded-0 border-0">
-                      <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">
-                      <div class="card-img-overlay">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text">Last updated 3 mins ago</p>
-                      </div>
-                  </div>                              
-              </div>#}
+                </div>                   
             </div>
         </div>
       </div>
@@ -208,7 +172,7 @@
     <!-- end of fifth banner -->
     <footer class="">
         <div class="bg-berkeley" style="padding: 5rem 0;">
-            <div class="container py-5">
+            <div class="container py-5" style="height: 612px;">
                 <div class="row">
                     <div class="col-lg-8 my-3">
 {#                        {{ page.footer_one }}#}
