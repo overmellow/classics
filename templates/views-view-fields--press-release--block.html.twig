@@ -39,7 +39,7 @@
         </div>
         <div class="col-lg-4 my-auto px-3">
             <div class="card bg-dark text-white shadow rounded-0 border-0">
-            {% if fields.field_image.content|length > 245 %}
+            {% if content.field_image|render is not empty %}
                 {{ fields.field_image.content }}        
             {% endif %}
     {#        <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">#}
