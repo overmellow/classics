@@ -20,7 +20,9 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
+{% if view.title %}
 <h1>{{ view.title }}</h1>
+{% endif %}
 <div class="py-3">
 {% for row in rows %}
   {%

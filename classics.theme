@@ -3,3 +3,8 @@
 function classics_preprocess_main__menu(&$variables) {
   $variables['attributes']['class'][] = 'clearfix';
 }
+
+function classics_preprocess_node(&$variables) {
+    $variables['facebook'] = theme_get_setting('facebook');
+    $variables['twitter'] = theme_get_setting('twitter');
+}
