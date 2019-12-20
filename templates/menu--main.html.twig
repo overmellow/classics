@@ -42,10 +42,10 @@
         %}
         {% endif %}        
         <li{{ item.attributes.addClass(item_classes) }}>
-            {% set link_classes = ['nav-link',] %}
+            {% set link_classes = ['nav-link', 'text-uppercase'] %}
             {% if item.below %}
                 {% set link_classes = link_classes | merge(['dropdown-toggle']) %}
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
             {% else %}
                 {{ link(item.title, item.url, item.attributes.removeClass(item_classes).addClass(link_classes)) }}        
             {% endif %}
@@ -57,7 +57,7 @@
 
 {#              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}#}
               {% for iteme in item.below %}
-                  <a class="dropdown-item" href="{{ iteme.url }}">{{ iteme.title }}</a>
+                  <a class="dropdown-item text-uppercase" href="{{ iteme.url }}">{{ iteme.title }}</a>
               {% endfor %}
               </div>
             {% endif %}

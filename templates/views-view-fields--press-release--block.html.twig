@@ -37,13 +37,23 @@
             <h2 class="featurette-heading">{{ fields.title.content }} <span class="text-muted"></span></h2>
             <p class="lead">{{ fields.body.content }}</p>
         </div>
+        {% if content.field_image|render is not empty %}        
         <div class="col-lg-4 my-auto px-3">
             <div class="card bg-dark text-white shadow rounded-0 border-0">
-            {% if content.field_image|render is not empty %}
                 {{ fields.field_image.content }}        
-            {% endif %}
-    {#        <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">#}
             </div>               
         </div>
+        {% endif %}        
+{#        {% if fields.field_image.content|length > 245 %}#}
+        <div class="col-lg-4 my-auto px-3">
+            <div class="card bg-dark text-white shadow rounded-0 border-0">
+                {#{{ fields.field_image.content|length }}#}
+{#            {% if content.field_image|render is not empty %}#}
+                {{ fields.field_image.content }}        
+{#            {% endif %}#}
+    {#        <img src="http://128.32.202.134/classics/sites/default/files/2019-10/0516-0-600x878.jpg" class="card-img rounded-0" alt="..." style="max-height: 400px;">#}
+            </div>               
+        </div>          
+{#        {% endif %}               #}
     </div>
 </div>

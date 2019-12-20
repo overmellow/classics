@@ -61,9 +61,11 @@
 
 <main role="main">    
     <div class="" style="margin-top: 80px">
+        {% if page.header %}
         <div class="h1">
             {{ page.header }}
-        </div>    
+        </div>
+        {% endif %}
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
